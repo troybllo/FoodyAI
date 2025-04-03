@@ -32,12 +32,11 @@ export default function RootLayout({
           antialiased
           rounded-2xl
           bg-white
+ min-w-screen
         `}
       >
         <div
           className="
-            max-w-7xl
-min-w-screen
             border 
             border-black
             rounded-2xl 

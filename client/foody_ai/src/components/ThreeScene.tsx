@@ -14,13 +14,13 @@ useGLTF.preload("/models/orange.glb");
 export default function ThreeScene() {
   return (
     <div className="w-[999px] h-[600px]">
-      <Canvas camera={{ position: [0, 1, 5], fov: 190 }}>
+      <Canvas camera={{ position: [0, 1, 5], fov: 60 }}>
         <ambientLight intensity={0.5} />
         <directionalLight position={[5, 5, 5]} intensity={1} />
         <Suspense fallback={null}>
           <AppleModel position={[-1.5, 0, 0]} />
           <OrangeModel position={[1.5, 0, 0]} />
-          <Environment preset="sunset" />
+          <Environment preset="park" />
         </Suspense>
         <OrbitControls enableZoom={false} />
       </Canvas>

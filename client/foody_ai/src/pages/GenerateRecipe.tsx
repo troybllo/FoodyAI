@@ -23,7 +23,7 @@ export default function GenerateRecipe() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/generate-recipe",
+        "http://192.168.130.62:5000/api/generate-recipe",
         {
           ingredients,
           dietaryRestrictions: diet,
