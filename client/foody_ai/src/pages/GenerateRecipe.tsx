@@ -60,12 +60,12 @@ export default function GenerateRecipe() {
 
   return (
     <div className="p-8 max-w-xl mx-auto">
-      <h2 className="text-2xl font-semibold mb-4">AI Recipe Generator</h2>
-
+      <h2 className="text-2xl bg-clip-text bg-gradient-to-r text-transparent bg from-gray-950 to-gray-100 font-semibold mb-4">
+        AI Recipe Generator
+      </h2>
       {error && (
         <div className="text-red-600 mb-4 p-2 bg-red-100 rounded">{error}</div>
       )}
-
       <label className="block mb-1 font-medium">
         Ingredients (comma-separated):
       </label>
@@ -77,7 +77,6 @@ export default function GenerateRecipe() {
         className="w-full mb-4 p-2 border border-gray-300 rounded"
         required
       />
-
       <label className="block mb-1 font-medium">Dietary Preference:</label>
       <input
         type="text"
@@ -86,8 +85,7 @@ export default function GenerateRecipe() {
         placeholder="e.g. keto, vegetarian, gluten-free"
         className="w-full mb-4 p-2 border border-gray-300 rounded"
       />
-
-      <label className="block mb-1 font-medium">Meal Type:</label>
+      k<label className="block mb-1 font-medium">Meal Type:</label>
       <input
         type="text"
         value={goal}
@@ -95,7 +93,6 @@ export default function GenerateRecipe() {
         placeholder="e.g. dinner, breakfast, lunch"
         className="w-full mb-4 p-2 border border-gray-300 rounded"
       />
-
       <button
         onClick={handleGenerate}
         disabled={loading}
@@ -107,7 +104,6 @@ export default function GenerateRecipe() {
       >
         {loading ? "Generating..." : "Generate Recipe"}
       </button>
-
       {recipe && (
         <div className="p-4 mt-8 border-2 border-white rounded-2xl whitespace-pre-wrap">
           <div>{recipe}</div>

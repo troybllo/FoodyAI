@@ -17,18 +17,18 @@ export default function Modal({
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       {/* Backdrop */}
       <div
-        className="fixed inset-0 backdrop-blur-3xl bg-gray-100/10 transition-opacity"
+        className="fixed inset-0 backdrop-blur-md bg-black/50 transition-opacity"
         onClick={onClose}
       />
 
       {/* Modal */}
-      <div className="relative border-black  rounded-lg max-w-md w-full mx-4 overflow-hidden shadow-2xl transform transition-all">
+      <div className="relative bg-black/30 backdrop-blur-xl border border-white/20 rounded-xl max-w-md w-full mx-4 overflow-hidden shadow-2xl transform transition-all text-white">
         {/* Header */}
-        <div className="flex items-center justify-between p-4 border-b">
-          <h3 className="text-xl font-semibold">{title}</h3>
+        <div className="flex items-center justify-between p-4 border-b border-white/10">
+          <h3 className="text-xl font-light tracking-wider">{title}</h3>
           <button
             onClick={onClose}
-            className="text-gray-400 hover:text-gray-500"
+            className="text-gray-400 hover:text-white transition-colors"
           >
             ✕
           </button>
