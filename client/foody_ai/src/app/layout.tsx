@@ -35,12 +35,11 @@ export default function RootLayout({
           min-h-screen
           text-white
           relative
-          flex items-center justify-center p-2 sm:p-6 md:p-8
+          flex items-center justify-center p-4 sm:p-6 md:p-8
+          overflow-hidden
         `}
       >
-        {/* Background image layer */}
         <div className="fixed inset-0 z-0">
-          {/* Image with overlay */}
           <div className="absolute inset-0 w-full h-full">
             <Image
               src={image2}
@@ -49,24 +48,27 @@ export default function RootLayout({
               priority
               className="object-cover grayscale-[30%]"
             />
-            {/* Darkening overlay */}
             <div className="absolute inset-0 bg-black/50"></div>
           </div>
 
-          {/* Multiple gradient circles to create depth */}
           <div className="absolute top-0 right-0 w-96 h-96 bg-gray-600 rounded-full blur-3xl opacity-20"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-gray-700 rounded-full blur-3xl opacity-15"></div>
           <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gray-500 rounded-full blur-3xl opacity-10"></div>
 
-          {/* Grain texture overlay */}
           <div className="absolute inset-0 grain-texture"></div>
         </div>
 
-        {/* Main content card */}
-        <div className="relative z-10 w-full h-full max-w-7xl max-h-[95vh] overflow-auto backdrop-blur-lg bg-black/20 border border-white/20 rounded-xl shadow-2xl">
-          <div className="p-4 sm:p-6">
+        {/* Main content card with fixed dimensions */}
+        <div
+          className="relative z-10 w-[1650px] h-[900px] 
+                     custom-scrollbar backdrop-blur-lg bg-black/20 
+                     border border-white/20 rounded-xl shadow-2xl"
+        >
+          <div className="p-4 sm:p-6 h-full">
             <Navbar />
-            <main>{children}</main>
+            <main className="h-[calc(100%-64px)] overflow-y-auto custom-scrollbar">
+              {children}
+            </main>
           </div>
         </div>
       </body>

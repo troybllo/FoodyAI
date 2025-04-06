@@ -85,7 +85,7 @@ export default function GenerateRecipe() {
         placeholder="e.g. keto, vegetarian, gluten-free"
         className="w-full mb-4 p-2 border border-gray-300 rounded"
       />
-      k<label className="block mb-1 font-medium">Meal Type:</label>
+      <label className="block mb-1 font-medium">Meal Type:</label>
       <input
         type="text"
         value={goal}
